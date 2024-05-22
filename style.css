@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide overflow to prevent scrollbar */
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2; /* Ensure it's above the particles */
+}
+
+/* Main Content Styles */
+main {
+    padding-top: 100px; /* To ensure content isn't hidden behind header */
+    position: relative; /* Necessary for z-index to work */
+    z-index: 1; /* Ensure it's below the header and above particles */
+}
+
+/* Color Code Styles */
+#color-code {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* Score Styles */
+#score {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Options Container Styles */
+#options-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr)); /* Adjusted for responsiveness */
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#options-container > div {
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    transition: transform 0.4s ease;
+}
+
+#options-container > div:hover {
+    transform: scale(1.1);
+}
+
+/* Particle.js Container Styles */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
